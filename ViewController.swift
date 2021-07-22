@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,8 +17,8 @@ class HomeViewController: UIViewController {
         view1.backgroundColor = .red
         let view2 = UIView()
         view2.backgroundColor = .yellow
-        let view3 = BottomControllView()
-
+        let view3 = UIView()
+        view3.backgroundColor = .blue
         
         //view用の配列的な扱いを今回しているstackViewさん
         let stackView = UIStackView(arrangedSubviews: [view1,view2,view3])
@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
         
         [
             view1.heightAnchor.constraint(equalToConstant: 100),
-            view3.heightAnchor.constraint(equalToConstant: 120),
+            view3.heightAnchor.constraint(equalToConstant: 100),
             
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
